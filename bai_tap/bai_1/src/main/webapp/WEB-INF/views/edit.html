@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<form th:action="@{/update}" method="post">
+	<input type="text" name="id" th:value="${product.id}" readonly> <br>
+	<input type="text" name="name" th:value="${product.name}"> <br>
+	<input type="text" name="price" th:value="${product.price}"> <br>
+	<select name="status" id="" th:value="${product.status}">
+		<option value="true">Bán</option>
+		<option value="false">Hết Hàng</option>
+	</select> <br>
+	<button type="submit">ADD</button>
+</form>
+</body>
+</html>
